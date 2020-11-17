@@ -1,0 +1,65 @@
+﻿@model IEnumerable<OrganisationWebApp.Models.Record>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalWy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumOfCom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearsInCurrR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearsInCurrCom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearsSinLastPromo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalWy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumOfCom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearsInCurrR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearsInCurrCom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearsSinLastPromo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RecordId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RecordId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RecordId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

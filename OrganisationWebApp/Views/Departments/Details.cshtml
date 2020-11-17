@@ -1,0 +1,48 @@
+﻿@model OrganisationWebApp.Models.Department
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Department</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmpId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BusinessT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BusinessT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobR)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobR)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DepId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
